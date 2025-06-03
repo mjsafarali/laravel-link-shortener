@@ -1,0 +1,71 @@
+{
+	"info": {
+		"_postman_id": "fb6c34db-5d1b-4a92-b1ba-dd6cd173df6b",
+		"name": "Laravel Link Shortner",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11073062"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/api/link-shortener/generate",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"url\": \"https://google.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/link-shortener/generate",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"link-shortener",
+						"generate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/link-shortener/get?url=http://localhost:8080/s/cFXtt94",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/link-shortener/get?url=http://localhost:8080/s/cFXtt94",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"link-shortener",
+						"get"
+					],
+					"query": [
+						{
+							"key": "url",
+							"value": "http://localhost:8080/s/cFXtt94"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
