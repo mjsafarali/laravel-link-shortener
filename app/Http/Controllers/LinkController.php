@@ -66,7 +66,7 @@ class LinkController extends Controller
         $shortStr = str_replace(asset('/s') . '/', '', $shortUrl);
 
         $link = Link::query()
-            ->select('original_url')
+            ->select('id', 'original_url', 'visit_count')
             ->where('short_url', '=', $shortStr)
             ->first();
 
@@ -80,7 +80,7 @@ class LinkController extends Controller
     public function redirect($short_str): \Illuminate\Http\RedirectResponse
     {
         $link = Link::query()
-            ->select('original_url')
+            ->select('id', 'original_url', 'visit_count')
             ->where('short_url', '=', $short_str)
             ->first();
 

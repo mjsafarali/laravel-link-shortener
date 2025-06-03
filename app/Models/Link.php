@@ -9,5 +9,6 @@ class Link extends Model
     protected $fillable = [
         'original_url',
         'short_url',
+        'visit_count',
     ];
 }

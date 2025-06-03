@@ -14,6 +14,7 @@ return new class extends Migration {
             $table->id();
             $table->text('original_url');
             $table->string('short_url', 7)->unique();
+            $table->unsignedInteger('visit_count')->default(0);
             $table->timestamps();
         });
     }
